@@ -1,5 +1,7 @@
 [gd_scene format=3 uid="uid://c7pyelekwfsmc"]
 
+[ext_resource type="PackedScene" uid="uid://cc13rdexu2ia6" path="res://car_body.tscn" id="1_u52ul"]
+
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_fmjdl"]
 albedo_color = Color(0.2231029, 0.2231029, 0.22310287, 1)
 
@@ -30,10 +32,14 @@ mesh = SubResource("BoxMesh_24gru")
 shape = SubResource("BoxShape3D_rbw6d")
 
 [node name="Camera3D" type="Camera3D" parent="." unique_id=1112187476]
-transform = Transform3D(1, 0, 0, 0, 0.83750826, 0.5464247, 0, -0.5464247, 0.83750826, 0, 6.6728287, 0)
+transform = Transform3D(1, 0, 0, 0, 0.83750826, 0.5464247, 0, -0.5464247, 0.83750826, 0, 3.9160252, 0)
 
 [node name="DirectionalLight3D" type="DirectionalLight3D" parent="." unique_id=97228247]
 transform = Transform3D(1, 0, 0, 0, 0.7391144, 0.67357993, 0, -0.67357993, 0.7391144, 0.30930305, 8.660339, -2.7092986)
+shadow_enabled = true
 
 [node name="WorldEnvironment" type="WorldEnvironment" parent="." unique_id=1172885444]
 environment = SubResource("Environment_vc1au")
+
+[node name="CarBody" parent="." unique_id=357680580 instance=ExtResource("1_u52ul")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 3.5186687, -6.0106773)

@@ -32,20 +32,24 @@ mesh = SubResource("BoxMesh_bphw3")
 
 [node name="FlSuspension" type="RayCast3D" parent="." unique_id=882410116]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.6, 0, 1.2)
+enabled = false
 debug_shape_custom_color = Color(1, 0, 0, 1)
 script = ExtResource("1_6stkd")
 
 [node name="FrSuspension" type="RayCast3D" parent="." unique_id=736402775]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.6, 0, 1.2)
+enabled = false
 debug_shape_custom_color = Color(1, 0, 0, 1)
 script = ExtResource("1_6stkd")
 
 [node name="RlSuspension" type="RayCast3D" parent="." unique_id=1425001648]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.6, 0, -1.5)
+enabled = false
 debug_shape_custom_color = Color(1, 0, 0, 1)
 script = ExtResource("1_6stkd")
 
 [node name="RrSuspension" type="RayCast3D" parent="." unique_id=1345868792]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.6, 0, -1.5)
+enabled = false
 debug_shape_custom_color = Color(1, 0, 0, 1)
 script = ExtResource("1_6stkd")

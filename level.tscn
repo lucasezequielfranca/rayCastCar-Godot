@@ -1,0 +1,39 @@
+[gd_scene format=3 uid="uid://c7pyelekwfsmc"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_fmjdl"]
+albedo_color = Color(0.2231029, 0.2231029, 0.22310287, 1)
+
+[sub_resource type="BoxMesh" id="BoxMesh_24gru"]
+material = SubResource("StandardMaterial3D_fmjdl")
+size = Vector3(50, 1, 50)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_rbw6d"]
+size = Vector3(50, 1, 50)
+
+[sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_vonw3"]
+
+[sub_resource type="Sky" id="Sky_5xgho"]
+sky_material = SubResource("ProceduralSkyMaterial_vonw3")
+
+[sub_resource type="Environment" id="Environment_vc1au"]
+background_mode = 2
+sky = SubResource("Sky_5xgho")
+
+[node name="Level" type="Node3D" unique_id=811898741]
+
+[node name="Ground" type="MeshInstance3D" parent="." unique_id=647103061]
+mesh = SubResource("BoxMesh_24gru")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="Ground" unique_id=1427399067]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Ground/StaticBody3D" unique_id=2011033170]
+shape = SubResource("BoxShape3D_rbw6d")
+
+[node name="Camera3D" type="Camera3D" parent="." unique_id=1112187476]
+transform = Transform3D(1, 0, 0, 0, 0.83750826, 0.5464247, 0, -0.5464247, 0.83750826, 0, 6.6728287, 0)
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="." unique_id=97228247]
+transform = Transform3D(1, 0, 0, 0, 0.7391144, 0.67357993, 0, -0.67357993, 0.7391144, 0.30930305, 8.660339, -2.7092986)
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="." unique_id=1172885444]
+environment = SubResource("Environment_vc1au")
